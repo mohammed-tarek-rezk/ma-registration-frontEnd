@@ -35,7 +35,7 @@ function Landing() {
     ]
 
   return (
-    <div className='bg-blue-50 border-b-2 border-main ' >
+    <div className='bg-blue-50  ' >
         <Container className="py-6 h-[650px] overflow-hidden flex justify-center items-center gap-5 flex-col-reverse lg:flex-row">  
           <div className='landing-text'>
             <h1 className='text-3xl md:text-4xl font-bold mb-3 '><span className='text-base font-normal'>Welcome to the</span> <br/>Material Advantage Suez Student chapter!</h1>
@@ -52,7 +52,7 @@ function Landing() {
             <Link onClick={()=> {window.scrollTo({
               top: 650 ,
               behavior: "smooth"
-            })}} className='animate-bounce absolute bottom-5 left-[50%] translate-x-[-50%] text-2xl text-main'><FaArrowCircleDown /></Link>
+            })}} className='animate-bounce absolute top-[650px] left-[50%] translate-x-[-50%] text-2xl text-main'><FaArrowCircleDown /></Link>
         </Container>
     </div>
   )
