@@ -13,7 +13,9 @@
 
         ;
     }
-
+    html{
+        scroll-behavior: smooth;
+    }
     .layout{
         background-color: rgba(0, 0, 3, 0.504);
         width: 100%;
