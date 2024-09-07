@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import img from "./../images/landing/it.jpg"
 function LandingSlide({slide}) {
   return (
-    <div className={`flex flex-col gap-0 bg-white rounded-2xl shadow  md:flex-row-reverse overflow-hidden md:h-[460px]  overflow-hidden`} >
-
+    <div className={`flex flex-col mx-2 gap-0 bg-white rounded-2xl shadow  md:flex-row-reverse md:h-[460px]  overflow-hidden`} >
         <div className={`flex-grow bg-[#E7FAFE] p-5 flex flex-col justify-center relative `} style={{backgroundImage: `url(${slide.img})` , backgroundSize: "cover"}}>
         <div className='layout'></div>
         <div className=' relative z-10'>

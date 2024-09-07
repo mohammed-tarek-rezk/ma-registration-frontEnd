@@ -4,23 +4,10 @@
 
 
 @layer base{
-    .slider-image{
-        background-image: 
-        radial-gradient(circle 900px at 100% 70%, rgba(255, 0, 0, 0.326)  ,  transparent ),
-        radial-gradient(circle 150px at 10% 0%, rgba(255, 0, 0, 0.326) 100% ,  transparent 100%),
-        radial-gradient(circle 50px at 15% 80%, rgba(255, 0, 0, 0.326) 100% ,  transparent 100%),
-        radial-gradient(circle 150px at 100% 70%, rgba(255, 0, 0, 0.326) 100% ,  transparent 100%)
-
-        ;
+    
+}
+@layer components{
+    .btn{
+        @apply block w-fit px-7 py-2 rounded-2xl font-bold transition-all my-5 shadow
     }
-
-    .layout{
-        background-color: rgba(0, 0, 3, 0.504);
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
-    }
-
 }
