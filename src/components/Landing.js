@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import { Link } from 'react-router-dom';
-
+import { FaArrowCircleDown } from "react-icons/fa";
 import img1 from "./../images/landing/1.jpg"
 import img2 from "./../images/landing/2.jpg"
 import img3 from "./../images/landing/3.jpg"
@@ -35,7 +35,7 @@ function Landing() {
     ]
 
   return (
-    <div className='bg-blue-50 border-b-2 border-main' >
+    <div className='bg-blue-50 border-b-2 border-main ' >
         <Container className="py-6 h-[650px] overflow-hidden flex justify-center items-center gap-5 flex-col-reverse lg:flex-row">  
           <div className='landing-text'>
             <h1 className='text-3xl md:text-4xl font-bold mb-3 '><span className='text-base font-normal'>Welcome to the</span> <br/>Material Advantage Suez Student chapter!</h1>
@@ -49,9 +49,13 @@ function Landing() {
           <div className='flex gap-2 lg:gap-4 justify-center landing-images '>
           {images.map((el)=> <img className='w-1/6 lg:w-24 h-[200px] md:h-[300px] lg:h-[480px] object-cover rounded-lg' key={el.id} src={el.src} alt="" />)}
           </div>
+            <Link onClick={()=> {window.scrollTo({
+              top: 650 ,
+              behavior: "smooth"
+            })}} className='animate-bounce absolute bottom-5 left-[50%] translate-x-[-50%] text-2xl text-main'><FaArrowCircleDown /></Link>
         </Container>
     </div>
   )
 }
-
+ 
 export default Landing

@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import it from "./../../images/landing/it.jpg";
+import hr from "./../../images/landing/hr.jpg";
 import { IoCodeSlash } from "react-icons/io5";
 
 let communitiesData = [
@@ -22,7 +24,7 @@ sections:[
     {title: "data Science" , role: "Learn how to use modern technologies to maintain data" , head: "abdelrahman " }
 ]
 ,
-    img: "",
+    img: it,
     link: "/communities/1",
     icon: IoCodeSlash,
   },
@@ -46,7 +48,7 @@ sections:[
     {title: "data Science" , role: "Learn how to use modern technologies to maintain data" , head: "abdelrahman " }
 ]
 ,
-    img: "hr",
+    img: hr,
     link: "/communities/2",
     icon: IoCodeSlash,
   },
@@ -70,7 +72,7 @@ sections:[
     {title: "data Science" , role: "Learn how to use modern technologies to maintain data" , head: "abdelrahman " }
 ]
 ,
-    img: "hr",
+    img: hr,
     link: "/communities/3",
     icon: IoCodeSlash,
   },
@@ -94,7 +96,7 @@ sections:[
     {title: "data Science" , role: "Learn how to use modern technologies to maintain data" , head: "abdelrahman " }
 ]
 ,
-    img: "hr",
+    img: hr,
     link: "/communities/4",
     icon: IoCodeSlash,
   },
