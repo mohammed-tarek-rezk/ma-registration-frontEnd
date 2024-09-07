@@ -11,22 +11,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 function HomeCom() {
-
-  let Communities = useSelector((state)=> state.communities)
+  let [more , setMore] = useState(false)
+  let [index , setIndex] = useState(4)
+   let Communities = useSelector((state)=> state.communities)
   gsap.registerPlugin(ScrollTrigger)
   useGSAP(()=>{
-    gsap.from(".com-div", { y:200 ,duration: 1, stagger:{amount:0.5 , axis: "x"}, scrollTrigger: {trigger: ".com-div"}})
-    gsap.utils.toArray(".com-div a").forEach((el)=>{
-      gsap.to(el,{
-        scale:1.05,
-        scrollTrigger: {
-          trigger: el,
-          start: "bottom bottom",
-          end: "top 0",
-          scrub: true
-        }
-      })
-    })
+    gsap.from(".com-div", { y:100 ,duration: 1, scrollTrigger: {trigger: ".com-div"}})
   },[])
 
   const settings = {
@@ -41,7 +31,7 @@ function HomeCom() {
     autoplaySpeed: 2000,
     pauseOnHover: true
   };
-
+  useEffect(()=>{},[])
   return (
     <div>
       <SectionHeader title="Our Communities" />
@@ -56,7 +46,7 @@ function HomeCom() {
           <div>
             <h2 className="text-xl my-4 font-bold">All communities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 com-div">
-              {Communities.map((el)=>(
+              {Communities.map((el, i)=> i < index || more ?(
                 <Link to={el.link} className=" overflow-hidden block rounded-lg bg-[#EFF6FF] shadow-md hover:scale-105 transition-all">
                   <img src={el.img} alt="" className="object-cover" />
                   <div className="p-3">
@@ -65,7 +55,13 @@ function HomeCom() {
                     <p className="my-3 h-[80px] line-clamp-4 text-sm text-gray-400">{el.role}</p>
                   </div>
               </Link>
-            ))}
+            )
+            
+            : null)}
+
+            </div>
+            <div className="flex justify-center ">
+              <button onClick={(e)=> setMore(!more)} className="btn bg-white text-main hover:bg-main hover:text-white border-2 border-main">{more? "show less": "show more"}</button>
             </div>
           </div>
         </Container>
