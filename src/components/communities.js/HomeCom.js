@@ -16,7 +16,7 @@ function HomeCom() {
    let Communities = useSelector((state)=> state.communities)
   gsap.registerPlugin(ScrollTrigger)
   useGSAP(()=>{
-    gsap.from(".com-div", { opacity: 0,y:100 ,duration: 1, scrollTrigger: {trigger: ".com-slider", start: "bottom bottom"}})
+    gsap.from(".com-div", { opacity: 0,y:100 ,duration: 1, scrollTrigger: {trigger: ".com-slider"}})
   },[])
 
   const settings = {
@@ -38,8 +38,9 @@ function HomeCom() {
       <SubHeader>
         discover your self 
       </SubHeader>
-      <div className="my-4">
-        <Container>
+
+      <div className="my-10">
+        <Container className="my-10">
           <Slider  {...settings} className="my-8  w-full com-slider">
             {Communities.map((el , i)=> i <= index && <LandingSlide slide={el}/>)}
           </Slider>
