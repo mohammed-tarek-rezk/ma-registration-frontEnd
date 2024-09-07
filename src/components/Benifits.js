@@ -8,6 +8,7 @@ import Benfit from './Benfit';
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all';
+import SubHeader from './SubHeader';
 function Benifits() {
     gsap.registerPlugin(ScrollTrigger)
     useGSAP(()=>{
@@ -24,10 +25,14 @@ function Benifits() {
         {id:3 , title: "Career Development", des: "Access internships, mentorships, and career guidance." , icon: FaBriefcase }
     ]
   return (
-    <div className='bg-blue-50 py-12'>
-        <Container className="benefits-cont">
+    <div className='bg-blue-50 '>
+        <Container className="benefits-cont py-10">
+            <SubHeader></SubHeader>
             <SectionHeader title={"Benefits"}/>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-5 benefits-box'>
+            <SubHeader>
+                what will you gain?
+            </SubHeader>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-5 benefits-box my-10'>
                 {benfits.map((el)=> <Benfit benfit={el} key={el.id}/>)}
             </div>
         </Container>
